@@ -1,0 +1,11 @@
+<% [:notice, :error, :alert, :success, :danger].each do |level| %>
+  <% if flash[level].present? %>
+      <div onload="new PNotify({
+        title: 'Regular Success',
+        text: 'That thing that you were trying to do worked!',
+        type: 'success',
+        styling: 'bootstrap3'
+        });">&times;</a>
+      </div>
+  <% end %>
+<% end %>

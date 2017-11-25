@@ -1,0 +1,56 @@
+<div class="manage-users container body">
+  <div class="right-col">
+    <div class>
+      <div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Manage User<small> Nhóm 15 kính chào thầy Cường</small></h2>
+      <ul class="nav navbar-right panel_toolbox">
+        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+        </li>
+        <li>
+          <a href="#" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-plus"></i></a>
+          <%= render "modal" %>
+        </li>
+        <li>
+          <%= link_to "/users/sign_out", method: :delete, class: "close-link", title: "sign out" do %>
+            <i class="fa fa-sign-out"></i>
+          <% end %>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+      <div class="table-responsive">
+        <table class="table table-striped jambo_table bulk_action">
+          <thead>
+            <tr class="headings">
+              <th class="column-title">Email </th>
+              <th class="column-title">Create Date </th>
+              <th class="column-title">Update Date </th>
+              <th class="column-title no-link last"><span class="nobr">Action</span>
+              </th>
+              <th class="bulk-actions" colspan="7">
+                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="users-class">
+            <%= render "users/users" %>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
