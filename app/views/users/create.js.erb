@@ -1,0 +1,16 @@
+PNotify.removeAll();
+<% [:notice, :error, :success].each do |level| %>
+  <% if flash[level].present? %>
+      new PNotify({
+        title: 'Ting Ting!!!',
+        text: '<%= flash[level] %>',
+        type: '<%= level.to_s %>',
+        styling: 'bootstrap3',
+        delay: 1000
+        });
+  <% end %>
+<% end %>
+if(($('.bs-example-modal-sm').data('bs.modal') || {}).isShown){
+  $('.bs-example-modal-sm').modal('toggle');
+}
+$('.users-class').html('<%= j render "users/users" %>');

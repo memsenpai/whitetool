@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "users#index"
   devise_for :users
   # Api definition
   namespace :api do
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
       resources :sessions
     end
   end
+  resources :users
 end

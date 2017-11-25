@@ -1,0 +1,13 @@
+<% User.all.each do |user| %>
+  <tr class="even pointer">
+    <td class=" "><%= user.email %></td>
+    <td class=" "><%= user.created_at %></td>
+    <td class=" "><%= user.updated_at %></td>
+    <td class="last">
+      <%= link_to user_path(user), method: :delete, title: "Delete User", remote: true do %>
+        <i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>
+      <% end %>
+    </td>
+    </td>
+  </tr>
+<% end %>
