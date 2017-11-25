@@ -27,7 +27,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.destroy params[:id]
+    user = User.find_by_id params[:id]
+    user.destroy
+    flash[:notice] = "Delete #{user.email}"
     respond_to do |format|
       format.js {render "users/create.js.erb"}
     end
